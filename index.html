@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Incredible Markyyy</title>
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #001f3f; /* Navy Blue */
+    color: white;
+    transition: background-color 0.5s ease;
+    font-size: 40px;
+}
+
+.container {
+    background: linear-gradient(145deg, #001f3f, #003366); /* Gradient background */
+    color: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    width: 420px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+h1 {
+    font-size: 1.5em; /* Reduced font size to half */
+}
+
+button {
+    background-color: #001f3f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+.go-home-btn {
+    background-color: #003366;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    line-height: 20px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.lets-gaur-btn {
+    background-color: #ffcc00;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 24px;
+    color: #003366;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.lets-gaur-btn:hover {
+    transform: scale(1.1);
+}
+
+#nextPart, #noPart, #envelopeSection {
+    display: none;
+}
+
+.notification {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2em;
+    transition: transform 0.6s ease-in-out;
+}
+
+.notification button {
+    background-color: #721c24;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.notification button:hover {
+    background-color: #5a1d25;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#slideSection {
+    background-color: #28a745;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: slideIn 0.6s ease-out;
+}
+
+/* New Phone Section Styles */
+.phone {
+    width: 400px;
+    height: 600px;
+    background-color: #ddd;
+    border-radius: 20px;
+    padding: 15px;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.screen {
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    background-color: #00B2FF;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    align-self: flex-start; /* Left alignment */
+    opacity: 100;
+    font-size: 30px; 
+    transition: opacity 0.5s ease-in;
+    text-align: left; /* Ensures the text inside the message is aligned to the left */
+}
+
+.unsent {
+    background-color: #f8d7da;
+    color: #721c24;
+    font-style: italic;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #1db954;
+}
+
+/* Quiz Section Styles */
+body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .quizcontainer {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            display: none; /* Hidden initially, shown dynamically */
+        }
+        h1 {
+            font-size: 24px;
+            color: #4CAF50;
+        }
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 18px;
+            color: blue;
+            display: none;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .wrong {
+            color: red;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+        .next-btn {
+            background-color: #007BFF;
+            font-size: 18px;
+            display: none; /* Hidden initially, shown dynamically */
+        }
+        .section-container {
+            display: none;
+        }
+        .section-container.active {
+            display: block;
+        }
+        .section-text {
+            font-size: 24px;
+        }
+        .gif-container {
+            margin: 20px 0;
+        }
+
+        #nextButton {
+    display: inline-block !important;
+    background: lightblue;
+    padding: 10px;
+    border: 2px solid black;
+}
+body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #001f3f; /* Navy Blue */
+            color: white;
+            transition: background-color 0.5s ease;
+        }
+
+        .checkbox-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 80%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .checkbox-column {
+            display: flex;
+            flex-direction: column;
+            font-size: 23px;  /* Increased font size by 5px */
+            width: 250px; /* Set width to make columns more compact */
+        }
+
+        .checkbox-column label {
+            margin: 10px 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            background-color: #003366;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #f0f8ff;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkbox-column input[type="checkbox"] {
+            transform: scale(1.5);
+            margin-right: 10px;
+        }
+
+        .checkbox-column label:hover {
+            background-color: #ff7f50; /* Hover effect */
+        }
+
+        .submit-btn {
+        background-color: #228b22;
+        border-radius: 50px;
+        padding: 15px 30px;
+        font-size: 24px;
+        color: #003366;
+        font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+.submit-btn:hover {
+    transform: scale(1.1);
+}
+
+        /* Pop-up notification styles */
+        .notification-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            color: black;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 26px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 300px;
+        }
+
+        /* Hide sections */
+        .hidden {
+            display: none;
+        }
+        
+        /* Styling for the checkbox columns */
+    #checkboxContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between columns */
+    }
+
+    .checkbox-column {
+    width: 30%;
+    min-width: 200px; /* Ensure they don't shrink too much */
+    }
+
+    /* Error message styling */
+    .error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 14px; /* Adjust font size */
+}
+
+    /* Styling for the submit button */
+    button.btn {
+    margin-top: 20px;
+    padding: 10px 15px; /* Add padding for a better button size */
+    font-size: 16px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* GroovySection Styling */
+.groovy-section {
+    text-align: center;
+    background-color: #003366;
+    color: #f0f8ff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.groovy-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.groovy-section .gif-container {
+    margin-bottom: 15px;
+}
+
+.groovy-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.groovy-section .btn {
+    background-color: #f0f8ff;
+    color: #003366;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.groovy-section .btn:hover {
+    background-color: #003366;
+    color: #f0f8ff;
+}
+
+/* Music Section Styling */
+#MusicSection {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f8ff;
+    color: #003366;
+}
+
+.music-header {
+    font-family: 'Fancy Font', sans-serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.music-subtext {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.vinyl-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.vinyl-img {
+    width: 150px;
+    max-width: 100%;
+}
+
+.spotify-button-container {
+    margin-bottom: 40px;
+}
+
+.spotify-button {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.spotify-button:hover {
+    background-color: #1ed760;
+}
+
+.song-columns {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.song-column {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.song-box {
+    background-color: #003366;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.song-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+audio {
+    width: 100%;
+}
+
+.next-section-button {
+    margin-top: 30px;
+}
+
+.btn {
+    background-color: #003366;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #005fa3;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container" id="nameCheck">
+        <h1>Is your name <i>Mark Anthony Ponce?</i></h1>
+        <button onclick="handleAnswer(true)">Yes</button>
+        <button onclick="handleAnswer(false)">No</button>
+    </div>
+
+    <div class="container" id="nextPart">
+        <h2><i>Hi Markyyyy!! Hope you like this! 😊</i></h2>
+        <h3>Hope you like this </h3>
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXJ0bXQxdTViYW9najZieTNzcW5xOTd1ajFkczQ5bXp5NHd3cWN6cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kKEfeS1dvieRHLtzo0/giphy.gif" alt="hi penguin" style="width: 100%; max-width: 300px;">
+        <button class="lets-gaur-btn" onclick="goToEnvelopeSection()">Let's Gaur</button>
+    </div>
+
+    <div class="container" id="noPart">
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJ3ZXhzeHgzZ3g1YThlYmNteGlsdTZmbGpodnFvYm1oaHJjczN3cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jni1tqwVBzsswq0qRS/giphy.gif" alt="why are you here?" style="width: 100%; max-width: 300px;">
+        <h2>Then why are you here?</h2>
+        <p><strong>This is only for Markyyy</strong></p>
+        <button class="go-home-btn" onclick="goHome()">🏠</button>
+    </div>
+    <!-- Envelope Section -->
+<div class="container" id="envelopeSection">
+    <h2>🎉 Surprise! </h2>
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExczA4ZWtraWk3YWV5M2picnVkbjUyeWNpd2JoYmE3Z3hmcXJ3M2VqNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m869RpaaVf94TiJTl0/giphy.gif" 
+         alt="Envelope" style="width: 100%; max-width: 300px;">
+    <p>Here's a special message just for you!</p>
+    <button onclick="openMessage()">Open Now</button>
+</div>
+
+<!-- Phone Section (Hidden Initially) -->
+<div class="container" id="phoneSection" style="display: none;">
+    <div class="phone">
+        <div class="screen" id="chat"></div>
+        <div class="button-container">
+            <button id="readyButton" onclick="showFactCheckSection()">Ready baby?</button>
+        </div>
+    </div>
+</div>
+
+<!-- Fact Check Section (Hidden Initially) -->
+<div class="container" id="factCheckSection" style="display: none;">
+    <h2>Fact Check</h2>
+    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXE4OGM4cGJqZ280eHQzN3MxaTFoNGpncG5oY2t0eTFubWZ4MzAzayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/42wQXwITfQbDGKqUP7/giphy.gif" alt="pikachu facts" style="width: 100%; max-width: 300px;">
+    <p>Your first task is to review the facts!</p>
+   <button id="factButton" onclick="showQuizSection()">I'm excited!!!</button>
+</div>
+
+<!-- Quiz Section (Hidden Initially) -->
+<div class="container" id="QuizSection">
+    <h1>Fact Check</h1>
+    <h2 id="question">Markyyy is an ordinary person</h2>
+    <button class="btn" onclick="checkAnswer(true)">True</button>
+    <button class="btn" onclick="checkAnswer(false)">False</button>
+    <h3 id="feedback" class="feedback"></h3>
+    <h3 id="error" class="wrong">❌ Try again babe</h3>
+    <button id="nextButton" class="next-btn" onclick="nextQuestion()">Next ➡️</button>
+</div>
+
+<div class="container section-container" id="congratsSection">
+    <h1 class="section-text">Great job, Markyyy!!</h1>
+    <div class="gif-container">
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmJpZnRzbDF6bDZzZ28yNXo1amx4cGZ2c2toZDl5cmE4YnVnaHZ4aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xlMWh89tib67i2jSJO/giphy.gif" alt="Celebration gif style="width: 100%; max-width: 300px;" />
+    </div>
+    <p class="section-text"><em>Now that we've established how amazing you are, let's build on that confidence even more!</em></p>
+    <button id="moreButton" class="btn" onclick="nextSection('checkItSection')">Wait, there's more?</button>
+    </div>
+
+<!-- Checkbox instructions section -->
+<section id="checkItSection" class="hidden">
+    <h2>Check it or Lose It!</h2>
+    <div class="gif-container">
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmJpZnRzbDF6bDZzZ28yNXo1amx4cGZ2c2toZDl5cmE4YnVnaHZ4aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xlMWh89tib67i2jSJO/giphy.gif" alt="Celebration gif style="width: 100%; max-width: 300px;" />
+    <p><strong>Mark</strong> check all the qualities that describe Markyyy.</p>
+    <button id="finishButton" class="btn" onclick="nextSection('FinishCheckboxSection')">Let's do this!</button>
+</section>
+</div>
+
+<!-- Checkbox section -->
+<section id="FinishCheckboxSection" class="hidden">
+    <h2>Markyyy's Qualities Checklist</h2>
+    <p>Check all the qualities that apply to Mark! Once done, click "Submit" to proceed.</p>
+
+    <div id="checkboxContainer">
+        <!-- Column 1 -->
+        <div class="checkbox-column">
+            <label><input type="checkbox" class="quality" /> Has a great singing voice</label>
+            <label><input type="checkbox" class="quality" /> Knows how to play the guitar</label>
+            <label><input type="checkbox" class="quality" /> Street smart</label>
+            <label><input type="checkbox" class="quality" /> Knows a lot about economics</label>
+            <label><input type="checkbox" class="quality" /> Can doodle</label>
+            <label><input type="checkbox" class="quality" /> Calm</label>
+            <label><input type="checkbox" class="quality" /> Independent-driven</label>
+            <label><input type="checkbox" class="quality" /> Ambitious</label>
+            <label><input type="checkbox" class="quality" /> Multi-talented</label>
+            <label><input type="checkbox" class="quality" /> Great listener</label>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="checkbox-column">
+            <label><input type="checkbox" class="quality" /> Sporty</label>
+            <label><input type="checkbox" class="quality" /> Resilient</label>
+            <label><input type="checkbox" class="quality" /> Perseveres through challenges</label>
+            <label><input type="checkbox" class="quality" /> Knowledgeable</label>
+            <label><input type="checkbox" class="quality" /> Can dance</label>
+            <label><input type="checkbox" class="quality" /> Direct!</label>
+            <label><input type="checkbox" class="quality" /> Provider mindset</label>
+            <label><input type="checkbox" class="quality" /> Can act!</label>
+            <label><input type="checkbox" class="quality" /> Charming</label>
+            <label><input type="checkbox" class="quality" /> Level-headed</label>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="checkbox-column">
+            <label><input type="checkbox" class="quality" /> Growth mindset</label>
+            <label><input type="checkbox" class="quality" /> Cuttiepattotie</label>
+            <label><input type="checkbox" class="quality" /> Handsome boi</label>
+            <label><input type="checkbox" class="quality" /> Great son and grandson</label>
+            <label><input type="checkbox" class="quality" /> Understanding</label>
+            <label><input type="checkbox" class="quality" /> Thoughtful</label>
+            <label><input type="checkbox" class="quality" /> Gives good advice</label>
+            <label><input type="checkbox" class="quality" /> Someone you can lean on</label>
+            <label><input type="checkbox" class="quality" /> Someone you can learn from</label>
+            <label><input type="checkbox" class="quality" /> Boyfriend material</label>
+            <label><input type="checkbox" class="quality" /> Crush ni Mika</label>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button id="submitButton" class="btn" onclick="validateCheckboxes()">Submit</button>
+
+    <!-- Error Message -->
+    <div id="error-message" class="error-message hidden">
+        You seem to be missing something, darling. 😉 Review again and make sure ALL qualities of Mark have been checked.
+    </div>
+</section>
+
+<!-- Well done section -->
+<div id="WellDoneSection" style="display: none;">
+    <h2> Well done, Markyyy! </h2>
+    <div class="gif-container">
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmJpZnRzbDF6bDZzZ28yNXo1amx4cGZ2c2toZDl5cmE4YnVnaHZ4aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xlMWh89tib67i2jSJO/giphy.gif" alt="Celebration gif" style="width: 100%; max-width: 300px;" />
+    </div>
+    <p>You see how many amazing qualities you have? And that's not even all! I could run out of checkboxes if we were to list out the FUN-tastic things about you. So let's just sum it up to one word, shall we? </p>
+    <button id="extraordinaryButton" class="btn">Markyyy is EXTRAordinary 💛</button>
+</div>
+
+<!--Groovy Section-->
+<div id="GroovySection" class="groovy-section" style="display: none;">
+    <h2> Let's get groovy 🎶 </h2>
+    <div class="gif-container">
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmJpZnRzbDF6bDZzZ28yNXo1amx4cGZ2c2toZDl5cmE4YnVnaHZ4aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xlMWh89tib67i2jSJO/giphy.gif" alt="Celebration gif" style="width: 100%; max-width: 300px;" />
+    </div>
+    <p>Get your earphones, guitar, and heartstrings ready. We're vibing today</p>
+    <button id="djButton" class="btn" onclick="nextSection('MusicSection')"> DJ, play the music! 💛</button>
+</div>
+
+<div id="MusicSection" style="display: none;">
+    <h2 class="music-header">Songs That Remind Me of You</h2>
+    <p class="music-subtext">or a list of songs requested by Mika to be played by Marky</p>
+
+    <!-- Vinyl gif in center -->
+    <div class="vinyl-container">
+        <img src="YOUR_VINYL_GIF_URL" alt="Vinyl gif" class="vinyl-img">
+    </div>
+
+    <!-- Spotify Playlist Button -->
+    <div class="spotify-button-container">
+        <button class="spotify-button" onclick="window.location.href='https://open.spotify.com/playlist/0yLkueDlAZlmaLfbyzhZK6?si=W4q0ECNISruz9tkK4m4TLg'">Spotify Playlist</button>
+    </div>
+
+    <!-- Song Boxes -->
+    <div class="song-columns">
+        <div class="song-column">
+            <div class="song-box">
+                <h3>I Still Want Your Love</h3>
+                <p>Sam Ock, Jinnie</p>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4BRqNwdxo1E39xolKfKlho?utm_source=generator" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="song-column">
+            <div class="song-box">
+                <h3>Song Title 2</h3>
+                <audio controls>
+                    <source src="YOUR_SONG_URL" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <!-- Repeat this block for other songs -->
+        </div>
+        <div class="song-column">
+            <div class="song-box">
+                <h3>Song Title 3</h3>
+                <audio controls>
+                    <source src="YOUR_SONG_URL" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <!-- Repeat this block for other songs -->
+        </div>
+        <div class="song-column">
+            <div class="song-box">
+                <h3>Song Title 4</h3>
+                <audio controls>
+                    <source src="YOUR_SONG_URL" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <!-- Repeat this block for other songs -->
+        </div>
+    </div>
+
+    <!-- Next Section Button -->
+    <div class="next-section-button">
+        <button class="btn" onclick="nextSection('StopOverSection')">Feeling inspired?</button>
+    </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+
+    <script>
+      // Initially show the first page
+document.getElementById('nameCheck').style.display = 'block';
+
+function handleAnswer(isMark) {
+    const container = document.getElementById('nameCheck');
+    container.style.animation = 'fadeOut 0.6s ease-out forwards';
+
+    setTimeout(function() {
+        container.style.display = 'none';
+        if (isMark) {
+            const nextPart = document.getElementById('nextPart');
+            nextPart.style.display = 'block';
+            nextPart.style.animation = 'fadeIn 0.6s ease-out forwards';
+        } else {
+            const noPart = document.getElementById('noPart');
+            noPart.style.display = 'block';
+            noPart.style.animation = 'fadeIn 0.6s ease-out forwards';
+        }
+    }, 600);
+}
+
+function goToEnvelopeSection() {
+    const nextPart = document.getElementById('nextPart');
+    nextPart.style.animation = 'fadeOut 0.6s ease-out forwards';
+
+    setTimeout(function() {
+        nextPart.style.display = 'none';
+        const envelopeSection = document.getElementById('envelopeSection');
+        envelopeSection.style.display = 'block';
+        envelopeSection.style.animation = 'fadeIn 0.6s ease-out forwards';
+    }, 600);
+}
+
+// Function to open message and show phone section
+function openMessage() {
+    // Hide any previous sections (like envelopeSection)
+    document.getElementById("envelopeSection").style.display = "none";
+
+    // Show the phone section and start the animation
+    document.getElementById("phoneSection").style.display = "block";
+    startChatAnimation(); // Start showing messages
+}
+
+// Function to start the chat animation with messages
+function startChatAnimation() {
+    const messages = [
+        "I know you’re humble",
+        "and there’s absolutely nothing wrong about that",
+        "that makes you even hotter btw",
+        "So I’ll do the bragging for you HAHAHAHA",
+        "Today we will appreciate you!!! ❤️"
+    ];
+
+    const chat = document.getElementById("chat");
+    const nextButton = document.getElementById("nextButton");
+
+    function showMessage(index) {
+        if (index < messages.length) {
+            const msgDiv = document.createElement("div");
+            msgDiv.classList.add("message");
+            msgDiv.textContent = messages[index];
+            chat.appendChild(msgDiv);
+
+            setTimeout(() => msgDiv.style.opacity = 1, 100);
+
+            // Line 3 gets unsent after 5 seconds
+            if (index === 2) {
+                setTimeout(() => {
+                    msgDiv.textContent = "Mika has unsent a message";
+                    msgDiv.classList.add("unsent");
+                }, 5000);
+            }
+
+            setTimeout(() => showMessage(index + 1), 2000);
+        } else {
+            setTimeout(() => readyButton.style.display = "block", 2000); // Show the "Ready baby?" button
+        }
+    }
+
+    // Start the animation when the button is clicked
+    setTimeout(() => showMessage(0), 1000);
+}
+
+// Function to show the Fact Check section after the chat animation is complete
+function showFactCheckSection() {
+    // Hide the phone section (chat)
+    document.getElementById('phoneSection').style.display = 'none';
+
+    // Show the Fact Check section
+    document.getElementById('factCheckSection').style.display = 'block';
+}
+
+function goHome() {
+    const noPart = document.getElementById('noPart');
+    noPart.style.animation = 'fadeOut 0.6s ease-out forwards';
+
+    setTimeout(function() {
+        noPart.style.display = 'none';
+        const container = document.getElementById('nameCheck');
+        container.style.display = 'block';
+        container.style.animation = 'fadeIn 0.6s ease-out forwards';
+    }, 600);
+}
+
+// Function to show the Quiz Section
+function showQuizSection() {
+    // Hide the Fact Check section
+    document.getElementById('factCheckSection').style.display = 'none';
+
+    //Show the Quiz section
+    document.getElementById('QuizSection').style.display = 'block';
+}
+
+//Function for the Quiz section
+const questions = [
+        { question: "Markyyy is an ordinary person", answer: false, feedback: "💡Markyyy is far from ordinary. He's extraordinary!! Everything about him is exceptional, from his talents to his heart. Simply put, the world isn’t ready for someone as amazing as him." },
+        { question: "Markyyy has no talents, knowledge, and skills.", answer: false, feedback: "💡Fact: Markyyy is an array of various talents, knowledge, and skills. And what makes it even better is he's not afraid to try new things! Ask him a copy of his acting debut! " },
+        { question: "Markyyy has growth mindset.", answer: true, feedback: "💡Fact: One of Markyyy’s best assets is his desire for growth and improvement. Seems like he's always reflecting on his self and trying to always be better. In turn, he'll inspire you to be better as well." },
+        { question: "Markyyy is boring to talk to.", answer: false, feedback: "💡Fact: It's a pleasure to talk to him because he knows a lot of things and you can learn a lot from him! Just ask him!" },
+        { question: "Markyyy won't be successful in life.", answer: false, feedback: "💡Fact: He's going to be successful - a businessman, an IT person, a white hacker, a web dev, or an actor - whatever it is, he will achieve all his dreams in his life." }
+    ];
+
+    let currentQuestionIndex = 0;
+
+    function showFeedback(isCorrect) {
+    const feedback = document.getElementById('feedback');
+    const error = document.getElementById('error');
+    const nextButton = document.getElementById('nextButton');
+
+    console.log(nextButton);  // 🔍 Check if the button is found
+
+    if (isCorrect) {
+        feedback.textContent = questions[currentQuestionIndex].feedback;
+        feedback.style.display = 'block';
+        error.style.display = 'none';
+        nextButton.style.display = 'inline-block'; // Show button
+        console.log('Next button should be visible now');
+    } else {
+        error.style.display = 'block';
+        feedback.style.display = 'none';
+        nextButton.style.display = 'none'; // Hide button
+        console.log('Hiding next button due to incorrect answer');
+    }
+}
+
+    function checkAnswer(isTrue) {
+        const correctAnswer = questions[currentQuestionIndex].answer;
+        const isCorrect = isTrue === correctAnswer;
+        showFeedback(isCorrect);
+    }
+
+    function nextQuestion() {
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex < questions.length) {
+        const questionContainer = document.getElementById('QuizSection');
+        questionContainer.querySelector('h2').textContent = questions[currentQuestionIndex].question;
+
+        // ✅ Hide Next Button Until Answered Correctly
+        document.getElementById('nextButton').style.display = 'none';
+
+        // Hide feedback and error text
+        document.getElementById('feedback').style.display = 'none';
+        document.getElementById('error').style.display = 'none';
+    } else {
+        // Show congratulatory section after quiz completion
+        document.getElementById('QuizSection').style.display = 'none';
+        document.getElementById('congratsSection').style.display = 'block';
+    }
+    }
+
+    function nextSection(sectionId) {
+        // Hide all sections first
+        const sections = document.querySelectorAll('.section-container');
+        sections.forEach(section => section.classList.remove('active'));
+        
+        // Hide the congrats section and show the next section
+        document.getElementById('congratsSection').style.display = 'none';
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    // Initially show quiz
+    document.getElementById('QuizSection').style.display = 'none';
+
+    function validateCheckboxes() {
+    const checkboxes = document.querySelectorAll('.quality');
+    const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+    const errorMessage = document.getElementById('error-message');
+    
+    if (allChecked) {
+        errorMessage.style.display = 'none';
+        nextSection('almostDoneSection'); // Proceed to the next section
+    } else {
+        errorMessage.style.display = 'block';
+    }
+}
+
+//Function for Checklist section
+function validateCheckboxes() {
+    // Get all the checkboxes with class "quality"
+    const checkboxes = document.querySelectorAll('.quality');
+    
+    // Check if all checkboxes are checked
+    const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+    
+    const errorMessage = document.getElementById('error-message');
+    
+    // If all checkboxes are checked, proceed to the next section
+    if (allChecked) {
+        errorMessage.style.display = 'none';
+        nextSection('WellDoneSection');  // Proceed to the "WellDoneSection"
+    } else {
+        // If not all checkboxes are checked, show error message
+        errorMessage.style.display = 'block';
+    }
+}
+
+function nextSection(sectionId) {
+    // Hide all sections first
+    document.querySelectorAll("section").forEach(section => {
+        section.classList.add("hidden");
+    });
+
+    // Show the requested section
+    document.getElementById(sectionId).classList.remove("hidden");
+}
+
+// Function to check if all checkboxes are checked
+function allCheckboxesChecked() {
+    const checkboxes = document.querySelectorAll('#checkboxContainer input[type="checkbox"]');
+    return Array.from(checkboxes).every(checkbox => checkbox.checked);
+}
+
+// Submit button click event
+document.getElementById('submitButton').addEventListener('click', function() {
+    if (allCheckboxesChecked()) {
+        // Hide the current section (FinishCheckboxSection)
+        document.getElementById('FinishCheckboxSection').style.display = 'none';
+        
+        // Show the WellDoneSection
+        document.getElementById('WellDoneSection').style.display = 'block';
+    } else {
+        // Show the error message if not all checkboxes are checked
+        document.querySelector('.error-message').style.display = 'block';
+    }
+});// Submit button click event
+document.getElementById('submitButton').addEventListener('click', function() {
+    if (allCheckboxesChecked()) {
+        // Hide the current section (FinishCheckboxSection)
+        document.getElementById('FinishCheckboxSection').style.display = 'none';
+
+        // Show the WellDoneSection
+        document.getElementById('WellDoneSection').style.display = 'block';
+    } else {
+        // Show the error message if not all checkboxes are checked
+        document.querySelector('.error-message').style.display = 'block';
+    }
+});
+
+// Function to handle the "moreButton" click in congratsSection
+document.getElementById('moreButton').addEventListener('click', function() {
+    // Hide congratsSection when the "moreButton" is clicked
+    document.getElementById('congratsSection').style.display = 'none';
+    
+    // Proceed to the next section (checkItSection)
+    nextSection('checkItSection');
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Show WellDoneSection when the page is loaded
+    document.getElementById('WellDoneSection').style.display = 'block';
+
+    // Function to handle the "extraordinaryButton" click in WellDoneSection
+    document.getElementById('extraordinaryButton').addEventListener('click', function() {
+        // Hide WellDoneSection when the "extraordinaryButton" is clicked
+        document.getElementById('WellDoneSection').style.display = 'none';
+
+        // Proceed to the next section (GroovySection)
+        nextSection('GroovySection');
+    });
+
+    // Function to handle the "djButton" click in GroovySection
+    document.getElementById('djButton').addEventListener('click', function() {
+        // Hide GroovySection when the "djButton" is clicked
+        document.getElementById('GroovySection').style.display = 'none';
+
+        // Proceed to the next section (MusicSection)
+        nextSection('MusicSection');
+    });
+});
+
+// Function to show the next section
+function nextSection(sectionId) {
+    // Hide all sections first
+    const sections = document.querySelectorAll('div');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Show the requested section
+    const sectionToShow = document.getElementById(sectionId);
+    if (sectionToShow) {
+        sectionToShow.style.display = 'block';
+    }
+}
+
+
+</script>
+</body>
+</html>
